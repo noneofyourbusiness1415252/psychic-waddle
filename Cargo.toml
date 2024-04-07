@@ -1,0 +1,16 @@
+[package]
+name = "psychic-waddle"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rc-zip-sync = "4.1.0"
+[dependencies.minreq]
+version = "2.11.1"
+features = ["https"]
+[profile.release]
+opt-level = "z"
+lto = true
+strip = true
+panic = 'abort'
+codegen-units = 1
